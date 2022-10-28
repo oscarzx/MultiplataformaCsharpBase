@@ -1,0 +1,2 @@
+# MultiplataformaCsharpBase
+Minimal API
