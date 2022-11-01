@@ -1,4 +1,4 @@
-﻿namespace StoresAPI.CSharpBase.DTOs;
+﻿namespace StoreDTOs;
 
 public record BranchDTO(int BranchId, string Name, string Location);
 public record NewBranch(string Name, string Location);

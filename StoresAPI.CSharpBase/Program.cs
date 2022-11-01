@@ -1,4 +1,3 @@
-using StoresAPI.CSharpBase.DTOs;
 using StoresAPI.CSharpBase.Repositories;
 using StoresAPI.CSharpBase.Routes;
 using StoresAPI.CSharpBase.StoresContexto;
