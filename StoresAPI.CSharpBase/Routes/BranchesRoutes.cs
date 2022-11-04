@@ -7,7 +7,7 @@ public static class BranchesRoutes
         app.MapGet("/branches", async (BranchesRepository branchesRepository) =>
         {
             var branches = await branchesRepository.GetAllAsync();
-            List<dtos.CountryDTO> result = new();
+            List<dtos.BranchDTO> result = new();
 
             foreach (var branch in branches)
                 result.Add(new(branch.BranchId, branch.Name, branch.Location));
