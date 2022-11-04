@@ -17,7 +17,7 @@ public abstract class BaseRestService
 	}
 
 	public async Task<IRestResponse<W>> SendRequest<V, W>
-		(HttpMethod httpMethod, V content = null, string uri = "")
+		(HttpMethod httpMethod, V content = null!, string uri = "")
 		where V : class
 		where W : class
 	{
@@ -44,7 +44,7 @@ public abstract class BaseRestService
 				genericRestResponse.ResponseMessage = "Error during sending";
 			}
 		}
-		catch(TimeoutException te)
+		catch(TimeoutException)
 		{
             genericRestResponse.ResponseStatus = ResponseStatus.Timeout;
             genericRestResponse.ResponseMessage = "Timeout";

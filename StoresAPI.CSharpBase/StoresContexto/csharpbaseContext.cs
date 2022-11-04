@@ -24,7 +24,7 @@ namespace StoresAPI.CSharpBase.StoresContexto
         {
             modelBuilder.Entity<Branch>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey("BranchId");
 
                 entity.Property(e => e.Location).HasMaxLength(150);
 
