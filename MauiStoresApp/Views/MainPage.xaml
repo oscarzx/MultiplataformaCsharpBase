@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStoresApp.Views.MainPage"
+             Title="MainPage">
+    <Grid RowDefinitions="auto, auto,*,20">
+
+        <Button Grid.Row="0"
+                Text="Cargar sucursales"
+                Command="{Binding LoadCommand}"/>
+
+        <ActivityIndicator Grid.Row="1" 
+                           IsRunning="{Binding IsBusy}" 
+                           IsVisible="{Binding IsBusy}"/>
+
+        <CollectionView Grid.Row="2" ItemsSource="{Binding Branches}">
+            
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
